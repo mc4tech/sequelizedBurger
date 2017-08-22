@@ -1,4 +1,4 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ("Bacon Cheeseburger", False);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Bacon Cheeseburger Deluxe", False);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Steak Cheeseburger", False);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Double Cheeseburger", False);
+INSERT INTO Burgers (burger_name, devoured, createdAt, updatedAt) VALUES ("Bacon Cheeseburger", False, NOW(), NOW());
+INSERT INTO Burgers (burger_name, devoured, createdAt, updatedAt) VALUES ("Bacon Cheeseburger Deluxe", False, NOW(), NOW());
+INSERT INTO Burgers (burger_name, devoured, createdAt, updatedAt) VALUES ("Steak Cheeseburger", False, NOW(), NOW());
+INSERT INTO Burgers (burger_name, devoured, createdAt, updatedAt) VALUES ("Double Cheeseburger", False, NOW(), NOW());
