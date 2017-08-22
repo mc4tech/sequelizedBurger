@@ -20,31 +20,26 @@ router.get("/", function(req, res) {
 });
 
 router.post("/burgers/create", function(req,res) {
-	// console.log("router.post req : ");
-	// console.log(req);
-	// console.log("router.post res : ");
-	// console.log(res);
-	if(req.body.burger_name === "" || undefined) {
-		console.log("must enter at least one char");
-	}else {
-		burger.create(req.body.burger_name, function(data) {
-			console.log("router.post burger.create cb data: ")
-			console.log(data);
-			res.redirect("/");
-		});
-	}
+	 db.Burger.create({
+      burger_name: req.body.burger_name,
+      devoured: req.body.devoured
+    }).then(function(dbBurger) {
+      // We have access to the new todo as an argument inside of the callback function
+    	res.redirect("/");
+	});
 });
 
 router.put("/burgers/update", function(req, res) {
-	// console.log("router.put req : ");
-	// console.log(req);
-	// console.log("router.put res : ");
-	// console.log(res);
-	console.log("req.body.burger_id");
-	console.log(req.body.burger_id);
-	burger.update(req.body.burger_id, function(data) {
-		console.log("router.put burger.create cb data: ")
-		console.log(data);
+	 // Update takes in an object describing the properties we want to update, and
+    // we use where to describe which objects we want to update
+    db.Burger.update({
+      burger_name: req.body.burger_name,
+      devoured: req.body.devoured
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbBurger) {
 		res.redirect("/");
 	});
 });
