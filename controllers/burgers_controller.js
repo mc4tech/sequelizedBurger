@@ -8,14 +8,14 @@ router.get("/", function(req, res) {
 	// console.log(req);
 	// console.log("router.get res : ");
 	// console.log(res);
-	db.Burger.findAll({}).then(function(dbBurger) {
+	db.Burger.findAll({}).then(function(burger_data) {
 		// console.log("router.get burger.all cb data: ")
 		// console.log(data);
-		var hbsObject = {
-			burger_data: dbBurger
-		};
-		console.log(hbsObject);
-		res.render("index", hbsObject);
+		// var hbsObject = {
+		// 	burger_data: dbBurger
+		// };
+		// console.log(hbsObject);
+		res.render("index", {burger_data});
 	});
 });
 
