@@ -8,11 +8,11 @@ router.get("/", function(req, res) {
 	// console.log(req);
 	// console.log("router.get res : ");
 	// console.log(res);
-	burger.all(function(data) {
+	db.Burger.findAll({}).then(function(dbBurger) {
 		// console.log("router.get burger.all cb data: ")
 		// console.log(data);
 		var hbsObject = {
-			burger_data: data
+			burger_data: dbBurger
 		};
 		console.log(hbsObject);
 		res.render("index", hbsObject);
