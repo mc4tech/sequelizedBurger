@@ -20,9 +20,10 @@ router.get("/", function(req, res) {
 });
 
 router.post("/burgers/create", function(req,res) {
-	 db.Burger.create({
-      burger_name: req.body.burger_name,
-      devoured: req.body.devoured
+	console.log(req.body.burger_name);		
+	db.Burger.create({
+    	burger_name: req.body.burger_name,
+    	devoured: req.body.devoured
     }).then(function(dbBurger) {
       // We have access to the new todo as an argument inside of the callback function
     	res.redirect("/");
@@ -32,13 +33,15 @@ router.post("/burgers/create", function(req,res) {
 router.put("/burgers/update", function(req, res) {
 	 // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
+    // var myJSON = JSON.parse(req.body.id);
+    console.log("req:");
+    console.log(req.body.burger_id);
     db.Burger.update({
-      burger_name: req.body.burger_name,
-      devoured: req.body.devoured
+       	devoured: true
     }, {
-      where: {
-        id: req.body.id
-      }
+    	where: {
+    	id: req.body.burger_id
+    }
     }).then(function(dbBurger) {
 		res.redirect("/");
 	});
