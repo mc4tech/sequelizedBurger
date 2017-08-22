@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var burger = require("../models/burger")
+var db = require("../models")
 
 //get route to index
 router.get("/", function(req, res) {
