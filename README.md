@@ -10,3 +10,5 @@ Some of the technologies/languages used in this application are :
 * MVC
 * Express.js
 * And other NPM packages
+
+[https://sequelized-burger-shop.herokuapp.com/](https://sequelized-burger-shop.herokuapp.com/)
