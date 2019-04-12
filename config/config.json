@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "letmein",
+    "password": "root",
     "database": "sequelizedburgers_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,9 +14,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "sc2r18nmtbrebr69",
-    "password": "qoe3u6sf4899u5l1",
-    "database": "sl2ep0qm5th3gma1",
+    "username": "gu17fqgbx65l8znx",
+    "password": "ea5ur2bi96jndvbr",
+    "database": "tfk2xtcb5x12vvxk",
     "host": "uc13jynhmkss3nve.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
